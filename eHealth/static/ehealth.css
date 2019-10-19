@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+body {
+    background: #f7f6f8;
+    color: #333333;
+    margin-top: 5rem;
+    padding: 50px;
+  }
+
+p{
+    color: blue;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #888;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 12px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: blue;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+.login {
+ text-align:center;
+ display:block;
+ background-color: white;
+ padding:50px 0px 50px 0px;
+}
+
+
+.login2 {
+ text-align:left;
+ display:block;
+ background-color: white;
+ padding:50px 0px 50px 0px;
+}
+
+.breadcrumbs{
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: #79aec8;
+     position: fixed;
+     top: 0;
+     width: 100%;
+     text-align: left;
+     boarder:none;
+}

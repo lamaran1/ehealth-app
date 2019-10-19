@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% extends 'base.html'%}
+
+
+
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+{%block content%}
+<body class="login">
+<form action='' method="POST">
+    {% csrf_token %}
+    {% if error %}
+    {{ error }}
+    {% endif %}
+    {{ form.as_p}}
+</form>
+    <form action="http://127.0.0.1:8000/login/"><input type="submit" value="Login" /></form>
+    <p> <a href="http://127.0.0.1:8000/signup/">don't have an account? </p>
+
+
+</body>
+
+{% endblock%}
+</html>
