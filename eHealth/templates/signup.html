@@ -2,17 +2,28 @@
 <html lang="en">
 <head>
     {% extends 'base.html'%}
-    {% block content%}
+{% load crispy_forms_tags %}
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body class="login2">
-<form method="POST"> {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Save"/>
-
-</form>
-
+{% block content%}
+<body>
+<div class="content_section">
+        <form method="post" "> {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Create a login account</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Create Account</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Already have an account? <a class="ml-2" href="#">Login in </a>
+            </small>
+        </div>
+</div>
 
 </body>
 {% endblock %}

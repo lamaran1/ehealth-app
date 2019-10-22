@@ -8,8 +8,13 @@
     <title>Title</title>
 </head>
 <body>
-
-<h1 style="color:red; padding:50px;"> Welcome </h1>
+<div class="welcome-text">
+    {% if user.is_authenticated%}
+        <h1> Welcome {{user}} </h1>
+    {%else%}
+        <h1>Welcome </h1>
+    {% endif %}
+</div>
 {% endblock%}
 
 </body>

@@ -37,11 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'rest_framework',
     'home',
     'login',
     'signup',
-    'profiles',
+    'django_tables2',
+    'chart',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +132,9 @@ STATICFILES_DIRS = [
 
 #STATIC_ROOT = os.path.join((BASE_DIR), "static_cdn")
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
@@ -138,3 +143,10 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = 'login'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackends'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
